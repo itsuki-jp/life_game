@@ -9,17 +9,17 @@ def copy_cells( input_cells ):
 
 
 # -------------------- 変数 --------------------
-h, w = 200, 200
 dead = 0
 alive = 1
+h, w = 150, 150
+size_w, size_h = 4, 4
+init_pos = [0, 0]  # [y,x]
+max_loop = 1000
 direction = [(1, 0), (-1, 0), (0, 1), (0, -1), (-1, -1), (1, -1), (-1, 1), (1, 1)]
 shape = {
     "octagon": [[0, 0, 0, 1, 1, 0, 0, 0], [0, 0, 1, 0, 0, 1, 0, 0], [0, 1, 0, 0, 0, 0, 1, 0], [1, 0, 0, 0, 0, 0, 0, 1],
                 [1, 0, 0, 0, 0, 0, 0, 1], [0, 1, 0, 0, 0, 0, 1, 0], [0, 0, 1, 0, 0, 1, 0, 0], [0, 0, 0, 1, 1, 0, 0, 0]]
 }
-size_w, size_h = 4, 4
-init_pos = [0, 0]  # [y,x]
-max_loop = 1000
 
 # -------------------- Tkinter --------------------
 # ウィンドウの生成
@@ -28,7 +28,7 @@ root.attributes("-topmost", True)
 root.minsize(width=w * size_w, height=h * size_h)
 
 # Frameウィジェットの生成
-frame = tkinter.Frame(root, width=w * size_w, height=h * size_h, bg="black")
+frame = tkinter.Frame(root, width=w * size_w, height=h * size_h)
 frame.propagate(False)
 frame.pack()
 
