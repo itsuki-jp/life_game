@@ -19,7 +19,7 @@ shape = {
 }
 size_w, size_h = 4, 4
 init_pos = [0, 0]  # [y,x]
-max_loop = 1000
+max_loop = 100
 
 # -------------------- Tkinter --------------------
 # ウィンドウの生成
